@@ -71,7 +71,7 @@ export default function App() {
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
                   <img
                     src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
-                    alt="About Mustafa Shop"
+                    alt="About Asad Shop"
                     className="w-full h-full object-cover"
                     referrerPolicy="no-referrer"
                   />
@@ -95,7 +95,7 @@ export default function App() {
                   <span className="italic text-stone-600">Since 2016</span>
                 </h2>
                 <p className="text-stone-600 mb-6 leading-relaxed">
-                  Mustafa Shop started with a simple vision: to provide high-quality, stylish clothing that empowers men to look and feel their best. We believe that fashion is more than just clothes; it's an expression of identity.
+                  Asad Shop started with a simple vision: to provide high-quality, stylish clothing that empowers men to look and feel their best. We believe that fashion is more than just clothes; it's an expression of identity.
                 </p>
                 <p className="text-stone-600 mb-8 leading-relaxed">
                   Our collections are carefully curated to ensure that every piece meets our standards of quality, comfort, and style. From the stitching of our sherwanis to the fabric of our t-shirts, we pay attention to the details that matter.

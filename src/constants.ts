@@ -81,7 +81,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'Discover the latest styles that will dominate the streets this summer season.',
     date: 'March 10, 2026',
     image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=800',
-    author: 'Mustafa'
+    author: 'Asad'
   },
   {
     id: 'b2',
@@ -89,6 +89,6 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: 'A comprehensive guide to finding a suit that fits your style and body type.',
     date: 'March 5, 2026',
     image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800',
-    author: 'Mustafa'
+    author: 'Asad'
   }
 ];

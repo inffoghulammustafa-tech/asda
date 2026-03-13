@@ -8,7 +8,7 @@ export const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           <div className="flex flex-col gap-6">
             <a href="/" className="text-2xl font-serif font-bold tracking-tight text-white">
-              MUSTAFA<span className="text-stone-500">SHOP</span>
+              ASAD<span className="text-stone-500">SHOP</span>
             </a>
             <p className="text-sm leading-relaxed">
               Premium men's fashion destination. We bring you the latest trends and timeless classics for every occasion.
@@ -56,14 +56,14 @@ export const Footer: React.FC = () => {
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={18} className="text-stone-500" />
-                contact@mustafashop.com
+                contact@asadshop.com
               </li>
             </ul>
           </div>
         </div>
         
         <div className="pt-8 border-t border-stone-800 flex flex-col md:flex-row justify-between items-center gap-4 text-xs">
-          <p>© 2026 Mustafa Shop. All rights reserved.</p>
+          <p>© 2026 Asad Shop. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white transition-colors">Terms of Service</a>
             <a href="#" className="hover:text-white transition-colors">Shipping Policy</a>

@@ -8,7 +8,7 @@ export const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center gap-8">
             <a href="/" className="text-2xl font-serif font-bold tracking-tight text-stone-900">
-              MUSTAFA<span className="text-stone-500">SHOP</span>
+              ASAD<span className="text-stone-500">SHOP</span>
             </a>
             <div className="hidden md:flex items-center gap-6 text-sm font-medium text-stone-600">
               <a href="/" className="hover:text-stone-900 transition-colors">Home</a>
