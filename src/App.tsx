@@ -1,0 +1,157 @@
+import { Navbar } from './components/Navbar';
+import { Hero } from './components/Hero';
+import { CategoryCard } from './components/CategoryCard';
+import { ProductCard } from './components/ProductCard';
+import { BlogCard } from './components/BlogCard';
+import { Footer } from './components/Footer';
+import { CATEGORIES, PRODUCTS, BLOG_POSTS } from './constants';
+import { motion } from 'motion/react';
+import { ArrowRight } from 'lucide-react';
+
+export default function App() {
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+      
+      <main className="flex-grow">
+        <Hero />
+
+        {/* Categories Section */}
+        <section className="py-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="flex justify-between items-end mb-12">
+            <div>
+              <span className="text-stone-500 font-medium tracking-widest uppercase text-xs mb-2 block">
+                Browse by
+              </span>
+              <h2 className="text-4xl font-serif font-bold text-stone-900">Categories</h2>
+            </div>
+            <a href="#shop" className="text-sm font-bold text-stone-900 flex items-center gap-2 hover:gap-3 transition-all">
+              View All <ArrowRight size={16} />
+            </a>
+          </div>
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {CATEGORIES.map((category) => (
+              <CategoryCard key={category.id} category={category} />
+            ))}
+          </div>
+        </section>
+
+        {/* Featured Products Section */}
+        <section id="shop" className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <span className="text-stone-500 font-medium tracking-widest uppercase text-xs mb-2 block">
+                Our Favorites
+              </span>
+              <h2 className="text-4xl font-serif font-bold text-stone-900">Featured Products</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+              {PRODUCTS.map((product) => (
+                <ProductCard key={product.id} product={product} />
+              ))}
+            </div>
+            <div className="mt-16 text-center">
+              <button className="border-2 border-stone-900 text-stone-900 px-10 py-4 rounded-full font-bold hover:bg-stone-900 hover:text-white transition-all">
+                Explore Full Shop
+              </button>
+            </div>
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section id="about" className="py-24 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <motion.div
+                initial={{ opacity: 0, x: -50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                className="relative"
+              >
+                <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+                  <img
+                    src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
+                    alt="About Mustafa Shop"
+                    className="w-full h-full object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="absolute -bottom-8 -right-8 bg-stone-900 text-white p-10 rounded-2xl hidden md:block">
+                  <p className="text-4xl font-serif font-bold mb-2">10+</p>
+                  <p className="text-stone-400 text-sm uppercase tracking-widest">Years of Style</p>
+                </div>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0, x: 50 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+              >
+                <span className="text-stone-500 font-medium tracking-widest uppercase text-xs mb-2 block">
+                  Our Story
+                </span>
+                <h2 className="text-4xl font-serif font-bold text-stone-900 mb-6">
+                  Crafting Confidence <br />
+                  <span className="italic text-stone-600">Since 2016</span>
+                </h2>
+                <p className="text-stone-600 mb-6 leading-relaxed">
+                  Mustafa Shop started with a simple vision: to provide high-quality, stylish clothing that empowers men to look and feel their best. We believe that fashion is more than just clothes; it's an expression of identity.
+                </p>
+                <p className="text-stone-600 mb-8 leading-relaxed">
+                  Our collections are carefully curated to ensure that every piece meets our standards of quality, comfort, and style. From the stitching of our sherwanis to the fabric of our t-shirts, we pay attention to the details that matter.
+                </p>
+                <button className="bg-stone-900 text-white px-8 py-4 rounded-full font-medium hover:bg-stone-800 transition-all">
+                  Read Our Full Story
+                </button>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Blogs Section */}
+        <section id="blogs" className="py-24 bg-stone-100">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-end mb-12">
+              <div>
+                <span className="text-stone-500 font-medium tracking-widest uppercase text-xs mb-2 block">
+                  Latest News
+                </span>
+                <h2 className="text-4xl font-serif font-bold text-stone-900">From Our Blog</h2>
+              </div>
+              <a href="#" className="text-sm font-bold text-stone-900 flex items-center gap-2 hover:gap-3 transition-all">
+                All Posts <ArrowRight size={16} />
+              </a>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {BLOG_POSTS.map((post) => (
+                <BlogCard key={post.id} post={post} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Newsletter Section */}
+        <section className="py-24 bg-stone-900 text-white">
+          <div className="max-w-3xl mx-auto px-4 text-center">
+            <h2 className="text-4xl font-serif font-bold mb-6">Join the Inner Circle</h2>
+            <p className="text-stone-400 mb-10">
+              Subscribe to our newsletter and get 10% off your first order, plus exclusive access to new drops and styling tips.
+            </p>
+            <form className="flex flex-col sm:flex-row gap-4" onSubmit={(e) => e.preventDefault()}>
+              <input
+                type="email"
+                placeholder="Enter your email address"
+                className="flex-grow bg-white/10 border border-white/20 rounded-full px-8 py-4 focus:outline-none focus:border-white transition-colors"
+              />
+              <button className="bg-white text-stone-900 px-10 py-4 rounded-full font-bold hover:bg-stone-200 transition-all">
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </section>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
