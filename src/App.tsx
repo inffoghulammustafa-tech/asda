@@ -1,3 +1,4 @@
+import { useRef } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { CategoryCard } from './components/CategoryCard';
@@ -5,15 +6,32 @@ import { ProductCard } from './components/ProductCard';
 import { BlogCard } from './components/BlogCard';
 import { Footer } from './components/Footer';
 import { CATEGORIES, PRODUCTS, BLOG_POSTS } from './constants';
-import { motion } from 'motion/react';
+import { motion, useScroll, useTransform } from 'motion/react';
 import { ArrowRight } from 'lucide-react';
 
 export default function App() {
+  const aboutRef = useRef(null);
+
+  const { scrollYProgress: aboutScroll } = useScroll({
+    target: aboutRef,
+    offset: ["start end", "end start"]
+  });
+
+  const aboutY = useTransform(aboutScroll, [0, 1], [0, -100]);
+
+  const showcaseRef = useRef(null);
+  const { scrollYProgress: showcaseScroll } = useScroll({
+    target: showcaseRef,
+    offset: ["start end", "end start"]
+  });
+  const showcaseY1 = useTransform(showcaseScroll, [0, 1], [50, -50]);
+  const showcaseY2 = useTransform(showcaseScroll, [0, 1], [-50, 50]);
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
       
-      <main className="flex-grow">
+      <main className="flex-grow relative">
         <Hero />
 
         {/* Categories Section */}
@@ -58,8 +76,44 @@ export default function App() {
           </div>
         </section>
 
+        {/* Dual Showcase Section */}
+        <section ref={showcaseRef} className="relative py-32 bg-stone-50 overflow-hidden">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+              <motion.div 
+                style={{ y: showcaseY1 }}
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl"
+              >
+                <img 
+                  src="https://thumbs.dreamstime.com/b/makeup-products-jewelry-floral-background-45379138.jpg" 
+                  alt="Beauty Showcase" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h3 className="text-2xl font-serif font-bold">Beauty Essentials</h3>
+                </div>
+              </motion.div>
+              <motion.div 
+                style={{ y: showcaseY2 }}
+                className="relative aspect-[3/4] rounded-2xl overflow-hidden shadow-xl md:mt-24"
+              >
+                <img 
+                  src="https://static.vecteezy.com/system/resources/thumbnails/059/145/924/small/vibrant-fashion-sale-banner-design-for-seasonal-store-promotions-photo.jpg" 
+                  alt="Fashion Showcase" 
+                  className="w-full h-full object-cover"
+                  referrerPolicy="no-referrer"
+                />
+                <div className="absolute bottom-6 left-6 text-white">
+                  <h3 className="text-2xl font-serif font-bold">Fashion Trends</h3>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
         {/* About Section */}
-        <section id="about" className="py-24 overflow-hidden">
+        <section id="about" ref={aboutRef} className="relative py-24 overflow-hidden">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <motion.div
@@ -69,10 +123,11 @@ export default function App() {
                 className="relative"
               >
                 <div className="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
-                  <img
+                  <motion.img
+                    style={{ y: aboutY }}
                     src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=800"
                     alt="About Asad Shop"
-                    className="w-full h-full object-cover"
+                    className="w-full h-[120%] object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>
