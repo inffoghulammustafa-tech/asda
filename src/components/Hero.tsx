@@ -86,7 +86,19 @@ export const Hero: React.FC = () => {
           </span>
           <h1 className="text-6xl md:text-8xl font-serif font-bold text-stone-900 leading-tight mb-8">
             The Art of <br />
-            <span className="italic text-stone-600">Elegance</span>
+            <motion.span 
+              animate={{ 
+                textShadow: [
+                  "0 0 0px rgba(168, 162, 158, 0)",
+                  "0 0 20px rgba(168, 162, 158, 0.4)",
+                  "0 0 0px rgba(168, 162, 158, 0)"
+                ]
+              }}
+              transition={{ duration: 3, repeat: Infinity }}
+              className="italic text-stone-600"
+            >
+              Elegance
+            </motion.span>
           </h1>
           <p className="text-xl text-stone-600 mb-10 max-w-lg leading-relaxed">
             A curated fusion of premium beauty and high-end fashion. Discover the collection that defines modern style.

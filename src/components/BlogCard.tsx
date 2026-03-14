@@ -12,8 +12,12 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
     <motion.article
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ 
+        y: -5,
+        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 0 15px 2px rgba(168, 162, 158, 0.2)"
+      }}
       viewport={{ once: true }}
-      className="flex flex-col gap-4"
+      className="flex flex-col gap-4 p-4 rounded-3xl transition-all duration-300"
     >
       <div className="aspect-[16/9] overflow-hidden rounded-2xl">
         <img

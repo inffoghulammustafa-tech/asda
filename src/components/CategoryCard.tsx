@@ -9,8 +9,11 @@ interface CategoryCardProps {
 export const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   return (
     <motion.div
-      whileHover={{ y: -5 }}
-      className="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[4/5]"
+      whileHover={{ 
+        y: -8,
+        boxShadow: "0 25px 30px -5px rgba(0, 0, 0, 0.2), 0 0 20px 2px rgba(255, 255, 255, 0.2)"
+      }}
+      className="relative group cursor-pointer overflow-hidden rounded-2xl aspect-[4/5] transition-all duration-300"
     >
       <img
         src={category.image}

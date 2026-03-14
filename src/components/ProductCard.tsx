@@ -12,8 +12,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
+      whileHover={{ 
+        y: -5,
+        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 0 15px 2px rgba(168, 162, 158, 0.3)"
+      }}
       viewport={{ once: true }}
-      className="group"
+      className="group rounded-2xl p-2 transition-all duration-300"
     >
       <div className="relative aspect-square overflow-hidden rounded-2xl bg-stone-200 mb-4">
         <img
