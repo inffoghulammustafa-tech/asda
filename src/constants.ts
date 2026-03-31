@@ -3,92 +3,92 @@ import { Product, BlogPost, Category } from './types';
 export const CATEGORIES: Category[] = [
   {
     id: '1',
-    name: 'T-shirt',
-    image: 'https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&q=80&w=800',
-    count: 12
+    name: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1595777457583-95e059d581b8?auto=format&fit=crop&q=80&w=800',
+    count: 24
   },
   {
     id: '2',
-    name: 'Tracksuit',
-    image: 'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&q=80&w=800',
-    count: 8
+    name: 'Tops',
+    image: 'https://images.unsplash.com/photo-1551163943-3f6a855d1153?auto=format&fit=crop&q=80&w=800',
+    count: 18
   },
   {
     id: '3',
-    name: 'Sherwani',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=800',
-    count: 5
+    name: 'Skirts',
+    image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&q=80&w=800',
+    count: 12
   },
   {
     id: '4',
-    name: 'Running Shoes',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800',
+    name: 'Handbags',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=800',
     count: 15
   },
   {
     id: '5',
-    name: 'Tactical Suit',
-    image: 'https://images.unsplash.com/photo-1508100134119-f93588df7638?auto=format&fit=crop&q=80&w=800',
-    count: 4
+    name: 'Jewelry',
+    image: 'https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?auto=format&fit=crop&q=80&w=800',
+    count: 30
   },
   {
     id: '6',
-    name: 'Pent Coat',
-    image: 'https://images.unsplash.com/photo-1594932224828-b4b059b6f6ee?auto=format&fit=crop&q=80&w=800',
-    count: 6
+    name: 'Footwear',
+    image: 'https://images.unsplash.com/photo-1543163521-1bf539c55dd2?auto=format&fit=crop&q=80&w=800',
+    count: 20
   }
 ];
 
 export const PRODUCTS: Product[] = [
   {
     id: 'p1',
-    name: 'Slim Fit Printed Polo',
-    price: 45.00,
-    category: 'T-shirt',
-    image: 'https://images.unsplash.com/photo-1581655353564-df123a1eb820?auto=format&fit=crop&q=80&w=800',
-    description: 'Casual slim fit printed golf polo shirt tops.'
+    name: 'Floral Maxi Dress',
+    price: 75.00,
+    category: 'Dresses',
+    image: 'https://images.unsplash.com/photo-1572804013309-59a88b7e92f1?auto=format&fit=crop&q=80&w=800',
+    description: 'Elegant floral print maxi dress for summer outings.'
   },
   {
     id: 'p2',
-    name: 'Athletic 2-Piece Tracksuit',
-    price: 89.99,
-    category: 'Tracksuit',
-    image: 'https://images.unsplash.com/photo-1483721310020-03333e577078?auto=format&fit=crop&q=80&w=800',
-    description: 'Casual full zip jogging sweat suit workout sports set.'
+    name: 'Silk Evening Blouse',
+    price: 55.00,
+    category: 'Tops',
+    image: 'https://images.unsplash.com/photo-1604176354204-9268737828e4?auto=format&fit=crop&q=80&w=800',
+    description: 'Luxurious silk blouse perfect for formal events.'
   },
   {
     id: 'p3',
-    name: 'Traditional Indian Sherwani',
-    price: 299.00,
-    category: 'Sherwani',
-    image: 'https://images.unsplash.com/photo-1594938298603-c8148c4dae35?auto=format&fit=crop&q=80&w=800',
-    description: 'Traditional Indian ethnic wear for men, ideal for weddings.'
+    name: 'Pleated Midi Skirt',
+    price: 45.00,
+    category: 'Skirts',
+    image: 'https://images.unsplash.com/photo-1583496661160-fb5886a0aaaa?auto=format&fit=crop&q=80&w=800',
+    description: 'Stylish pleated midi skirt with a comfortable fit.'
   },
   {
     id: 'p4',
-    name: 'Blade Type Sneakers',
-    price: 120.00,
-    category: 'Running Shoes',
-    image: 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?auto=format&fit=crop&q=80&w=800',
-    description: 'Non-slip athletic tennis walking blade type sneakers.'
+    name: 'Designer Leather Handbag',
+    price: 150.00,
+    category: 'Handbags',
+    image: 'https://images.unsplash.com/photo-1584917865442-de89df76afd3?auto=format&fit=crop&q=80&w=800',
+    description: 'Premium leather handbag with elegant gold hardware.'
   }
 ];
 
 export const BLOG_POSTS: BlogPost[] = [
   {
     id: 'b1',
-    title: 'Summer Fashion Trends 2026',
-    excerpt: 'Discover the latest styles that will dominate the streets this summer season.',
-    date: 'March 10, 2026',
-    image: 'https://images.unsplash.com/photo-1441984904996-e0b6ba687e04?auto=format&fit=crop&q=80&w=800',
-    author: 'Asad'
+    title: 'Spring Fashion Trends 2026',
+    excerpt: 'Discover the latest styles that will dominate the streets this spring season.',
+    date: 'March 25, 2026',
+    image: 'https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800',
+    author: 'Sarah'
   },
   {
     id: 'b2',
-    title: 'How to Choose the Perfect Suit',
-    excerpt: 'A comprehensive guide to finding a suit that fits your style and body type.',
-    date: 'March 5, 2026',
-    image: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800',
-    author: 'Asad'
+    title: 'Accessorizing Your Outfit',
+    excerpt: 'A comprehensive guide to choosing the right accessories for any occasion.',
+    date: 'March 15, 2026',
+    image: 'https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800',
+    author: 'Elena'
   }
 ];

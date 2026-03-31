@@ -14,7 +14,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
       whileInView={{ opacity: 1, y: 0 }}
       whileHover={{ 
         y: -5,
-        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 0 15px 2px rgba(168, 162, 158, 0.2)"
+        boxShadow: "0 20px 25px -5px rgba(0, 0, 0, 0.05), 0 0 15px 2px rgba(30, 58, 138, 0.2)"
       }}
       viewport={{ once: true }}
       className="flex flex-col gap-4 p-4 rounded-3xl transition-all duration-300"
@@ -27,7 +27,7 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           referrerPolicy="no-referrer"
         />
       </div>
-      <div className="flex items-center gap-4 text-xs text-stone-500 font-medium uppercase tracking-wider">
+      <div className="flex items-center gap-4 text-xs text-blue-500 font-medium uppercase tracking-wider">
         <span className="flex items-center gap-1">
           <Calendar size={12} />
           {post.date}
@@ -37,13 +37,13 @@ export const BlogCard: React.FC<BlogCardProps> = ({ post }) => {
           By {post.author}
         </span>
       </div>
-      <h3 className="text-xl font-serif font-bold text-stone-900 hover:text-stone-600 transition-colors cursor-pointer">
+      <h3 className="text-xl font-serif font-bold text-blue-950 hover:text-blue-700 transition-colors cursor-pointer">
         {post.title}
       </h3>
-      <p className="text-stone-600 line-clamp-2">
+      <p className="text-blue-800 line-clamp-2">
         {post.excerpt}
       </p>
-      <a href="#" className="text-sm font-bold text-stone-900 underline underline-offset-4 hover:text-stone-600 transition-colors">
+      <a href="#" className="text-sm font-bold text-blue-950 underline underline-offset-4 hover:text-blue-700 transition-colors">
         Read More
       </a>
     </motion.article>
